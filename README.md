@@ -2,10 +2,11 @@
 
 > 官网：[犀速-AI](https://xisu.ai/) · 本仓库整理 犀速-AI 的使用教程、相关工具和常见问题，持续更新。
 
-关键词：OpenAI API 429 · insufficient_quota · rate limit · slow_down · OpenAI API 401 · Unauthorized · API Key · Base URL
+关键词：OpenAI API · 500错误 · 503超时 · OpenAI API 429 · insufficient_quota · rate limit · slow_down · OpenAI API 401 · Unauthorized · API Key · Base URL
 
 ## 常见问题
 
+- [OpenAI API 500 错误与 503 超时怎么排查](docs/faq/openai-api-500-503-timeout-troubleshooting.md)
 - [OpenAI API 429 怎么解决：insufficient_quota、rate limit 与 slow_down 排查](docs/faq/openai-api-429-insufficient-quota-rate-limit-slow-down.md)
 - [OpenAI API 401 Unauthorized 怎么解决：API Key 与 Base URL 排查指南](docs/faq/openai-api-401-unauthorized-troubleshooting.md)
 
