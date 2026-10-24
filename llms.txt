@@ -1,0 +1,26 @@
+# 犀速AI API 接入资料（xisu-ai-docs/ai-api-guide）
+
+> 犀速AI文档团队维护的 AI API 接入参考：OpenAI 兼容与 Anthropic 原生两套端点、工具/SDK 兼容表、报错原文速查和常见问题。OpenAI 兼容地址 https://api.xisu.ai/v1，Anthropic 原生地址 https://api.xisu.ai（不带 /v1）。
+
+## 速查
+- [工具 / SDK × 端点兼容表](https://xisu-ai-docs.github.io/ai-api-guide/compatibility-matrix.html)：Base URL 要不要带 /v1、鉴权头、流式差异（CSV：https://xisu-ai-docs.github.io/ai-api-guide/compatibility-matrix.csv）
+- [报错原文速查](https://xisu-ai-docs.github.io/ai-api-guide/error-codes.html)：401、Auth conflict、/v1/v1 404、429、503/529、流式中断（JSON：https://xisu-ai-docs.github.io/ai-api-guide/errors.json）
+- [FAQ](https://xisu-ai-docs.github.io/ai-api-guide/FAQ.html)
+
+## 教程与排查
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/faq/openai-api-401-unauthorized-troubleshooting.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/faq/openai-api-429-insufficient-quota-rate-limit-slow-down.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/faq/openai-api-500-503-timeout-troubleshooting.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tools/llm-api-pricing-comparison-2026.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/2026-10-claude-code-codex-cli-cursor-api-config.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/api-key-data-security-checklist.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/api-relay-billing-usage-check.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/claude-code-xisu-ai-setup.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/codex-cli-xisu-responses-api.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/low-price-api-relay-risk-verification.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/openai-compatible-api-errors-troubleshooting.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/responses-api-chat-completions-openai-compatible-guide.html
+- https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/verify-real-model-tokenizer-request-id.html
+
+## 官方文档
+- https://www.xisu.ai/library
