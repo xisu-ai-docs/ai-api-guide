@@ -1,0 +1,198 @@
+{
+  "updated": "2026-10-24",
+  "source": "https://www.xisu.ai/library/errors",
+  "base_url_openai": "https://api.xisu.ai/v1",
+  "base_url_anthropic": "https://api.xisu.ai",
+  "errors": [
+    {
+      "id": "invalid_api_key",
+      "protocol": "openai",
+      "http": 401,
+      "symptom": "invalid_api_key / 401",
+      "meaning": "密钥无效；如果这把密钥配了 IP 白名单，从名单外调用也返回同一个码",
+      "check": "先确认请求的来源 IP 是否在白名单里，再确认密钥完整、未被吊销",
+      "retry": false,
+      "fix": "复制完整密钥重新配置；配了白名单的先核对来源 IP，不要急着重建密钥"
+    },
+    {
+      "id": "auth_conflict",
+      "protocol": "anthropic",
+      "http": null,
+      "symptom": "Claude Code 提示 Auth conflict",
+      "meaning": "通常是环境里同时设置了 ANTHROPIC_AUTH_TOKEN 和 ANTHROPIC_API_KEY（或已用账号登录又设置了密钥），Claude Code 不确定用哪一个",
+      "check": "env | grep ANTHROPIC",
+      "retry": false,
+      "fix": "只保留一种认证：unset ANTHROPIC_API_KEY，用 ANTHROPIC_AUTH_TOKEN 填犀速密钥；之前用账号登录过的先 /logout"
+    },
+    {
+      "id": "double_v1_404",
+      "protocol": "anthropic",
+      "http": 404,
+      "symptom": "请求打到 …/v1/v1/messages 返回 404",
+      "meaning": "Anthropic SDK / Claude Code 的地址多写了 /v1",
+      "check": "看报错或日志里的完整请求地址是否出现两次 /v1",
+      "retry": false,
+      "fix": "ANTHROPIC_BASE_URL 改成 https://api.xisu.ai（不带 /v1）"
+    },
+    {
+      "id": "model_not_supported_for_endpoint",
+      "protocol": "openai",
+      "http": 400,
+      "symptom": "model_not_supported_for_endpoint",
+      "meaning": "对话模型打到了 /v1/embeddings，或反过来",
+      "check": "message 会说明模型属于哪一类",
+      "retry": false,
+      "fix": "对话模型用 /v1/chat/completions，向量模型用 /v1/embeddings"
+    },
+    {
+      "id": "model_not_on_endpoint",
+      "protocol": "responses",
+      "http": 404,
+      "symptom": "404 model_not_on_endpoint",
+      "meaning": "模型有上游，但上游服务不了 /v1/responses",
+      "check": "同一模型在 /v1/chat/completions 是否可用",
+      "retry": false,
+      "fix": "换一个标有 Responses 的模型，或改走 /v1/chat/completions"
+    },
+    {
+      "id": "not_found_error",
+      "protocol": "anthropic",
+      "http": 404,
+      "symptom": "not_found_error（走 /v1/messages）",
+      "meaning": "该模型没有配 Anthropic 上游，不是模型名写错",
+      "check": "message 会指向 /v1/chat/completions",
+      "retry": false,
+      "fix": "换模型，或改走 /v1/chat/completions"
+    },
+    {
+      "id": "rate_limit_exceeded",
+      "protocol": "openai",
+      "http": 429,
+      "symptom": "rate_limit_exceeded / 429",
+      "meaning": "请求过快",
+      "check": "响应头里的 Retry-After（秒）",
+      "retry": true,
+      "fix": "按 Retry-After 做指数退避加抖动，不要固定间隔重试"
+    },
+    {
+      "id": "rate_limit_error",
+      "protocol": "anthropic",
+      "http": 429,
+      "symptom": "rate_limit_error / 429（走 /v1/messages）",
+      "meaning": "限流、配额用尽、余额不足、密钥预算到顶四种情况共用这一个类型",
+      "check": "先看余额，再看 message 是否写明是账务限制",
+      "retry": "仅当 message 不是账务限制时",
+      "fix": "账务限制去充值或调预算；真限流才按退避重试"
+    },
+    {
+      "id": "insufficient_balance",
+      "protocol": "openai",
+      "http": null,
+      "symptom": "insufficient_balance",
+      "meaning": "余额为正但不够这一笔",
+      "check": "控制台余额",
+      "retry": false,
+      "fix": "充值"
+    },
+    {
+      "id": "account_overdrawn",
+      "protocol": "openai",
+      "http": null,
+      "symptom": "account_overdrawn",
+      "meaning": "余额为负，通常是退款扣回",
+      "check": "控制台余额是否为负",
+      "retry": false,
+      "fix": "开工单核对账务，再充值解决不了根因"
+    },
+    {
+      "id": "budget_exceeded",
+      "protocol": "openai",
+      "http": null,
+      "symptom": "budget_exceeded",
+      "meaning": "这把密钥已达预算上限",
+      "check": "控制台密钥预算",
+      "retry": false,
+      "fix": "调整预算或换一把密钥"
+    },
+    {
+      "id": "model_not_allowed",
+      "protocol": "openai",
+      "http": null,
+      "symptom": "model_not_allowed",
+      "meaning": "这把密钥不能调这个模型",
+      "check": "message 写 “by your plan” 是套餐限制，写 “for this API key” 是密钥范围限制",
+      "retry": false,
+      "fix": "升级套餐，或联系客服放宽这把密钥的模型范围"
+    },
+    {
+      "id": "overloaded_529_vs_503",
+      "protocol": "anthropic",
+      "http": 503,
+      "symptom": "529 / overloaded_error",
+      "meaning": "Anthropic 官方 API 用 529 表示过载；在犀速网关上同类情况返回 503 overloaded_error，表示该模型此刻没有可用上游",
+      "check": "响应里的 Retry-After",
+      "retry": true,
+      "fix": "按 Retry-After 退避重试，通常分钟级自愈；它和 404 not_found_error 的处理方向相反"
+    },
+    {
+      "id": "no_available_channel",
+      "protocol": "openai",
+      "http": 503,
+      "symptom": "no_available_channel",
+      "meaning": "该模型暂时不可用",
+      "check": "过几分钟用同一请求重试",
+      "retry": true,
+      "fix": "稍后重试或临时换模型"
+    },
+    {
+      "id": "upstream_error",
+      "protocol": "openai",
+      "http": 502,
+      "symptom": "upstream_error / 502",
+      "meaning": "上游返回错误，原因归不到你的请求体",
+      "check": "换一个模型是否正常",
+      "retry": true,
+      "fix": "换模型试；持续出现带 request_id 提工单"
+    },
+    {
+      "id": "upstream_rejected_request",
+      "protocol": "openai",
+      "http": 400,
+      "symptom": "upstream_rejected_request / 400",
+      "meaning": "上游认定请求本身不合法，最常见是工具的 JSON Schema 不被接受",
+      "check": "message 里通常带上游原话",
+      "retry": false,
+      "fix": "按 message 修改请求体再发，原样重试结果不变"
+    },
+    {
+      "id": "context_length_exceeded",
+      "protocol": "openai",
+      "http": 400,
+      "symptom": "context_length_exceeded",
+      "meaning": "输入本身超过模型声明的上下文上限（只看输入，不算 max_tokens）",
+      "check": "报错里带实际长度和上限",
+      "retry": false,
+      "fix": "缩短或分段输入，或换上下文更大的模型"
+    },
+    {
+      "id": "stream_interrupted",
+      "protocol": "any",
+      "http": null,
+      "symptom": "流式输出中途断开",
+      "meaning": "连接中断；已经生成的 token 照常计费",
+      "check": "是否拿到了最后的 usage 块（OpenAI 兼容）或 message_stop / response.completed 事件",
+      "retry": true,
+      "fix": "新开一个请求重试，网关没有续传语义；长时间无输出通常是上游排队，按客户端超时处理"
+    },
+    {
+      "id": "sdk_auto_retry_double_charge",
+      "protocol": "any",
+      "http": null,
+      "symptom": "超时后账单出现两笔",
+      "meaning": "SDK 自动重试会被当成新请求，网关不做跨请求去重",
+      "check": "对比两次响应的 request_id",
+      "retry": false,
+      "fix": "调低或关闭 SDK 默认重试，在业务侧按 id 去重"
+    }
+  ]
+}
