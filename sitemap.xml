@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/compatibility-matrix.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/error-codes.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/FAQ.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/faq/openai-api-401-unauthorized-troubleshooting.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/faq/openai-api-429-insufficient-quota-rate-limit-slow-down.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/faq/openai-api-500-503-timeout-troubleshooting.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tools/llm-api-pricing-comparison-2026.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/2026-10-claude-code-codex-cli-cursor-api-config.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/api-key-data-security-checklist.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/api-relay-billing-usage-check.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/claude-code-xisu-ai-setup.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/codex-cli-xisu-responses-api.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/low-price-api-relay-risk-verification.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/openai-compatible-api-errors-troubleshooting.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/responses-api-chat-completions-openai-compatible-guide.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://xisu-ai-docs.github.io/ai-api-guide/docs/tutorials/verify-real-model-tokenizer-request-id.html</loc><lastmod>2026-10-24</lastmod></url>
+</urlset>
