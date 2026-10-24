@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xisu-ai-docs.github.io/ai-api-guide/sitemap.xml
