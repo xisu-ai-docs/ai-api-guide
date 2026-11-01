@@ -2,7 +2,7 @@
 
 > 官网：[犀速-AI](https://xisu.ai/) · 本仓库整理 犀速-AI 的使用教程、相关工具和常见问题，持续更新。
 
-关键词：OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · Responses API · Chat Completions · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit · Claude Code · 犀速-AI · Windows · macOS · Linux · Anthropic API · 环境变量 · Claude 模型 · 真模型验证 · 模型替换 · 模型降级 · 分词器指纹 · request_id · token 对账 · Claude · GPT · OpenAI 兼容接口
+关键词：Node.js OpenAI SDK · 401 invalid_api_key · OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · Responses API · Chat Completions · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit · Claude Code · 犀速-AI · Windows · macOS · Linux · Anthropic API · 环境变量 · Claude 模型 · 真模型验证 · 模型替换 · 模型降级 · 分词器指纹 · request_id · token 对账 · Claude
 
 ## 教程
 
@@ -22,6 +22,7 @@
 
 ## 常见问题
 
+- [Node.js OpenAI SDK 401 invalid_api_key：request ID 读取与排查](docs/faq/nodejs-openai-sdk-401-invalid-api-key-request-id.md)
 - [OpenAI API 404 model_not_found 怎么解决：模型名称与 Base URL 排查指南](docs/faq/openai-api-404-model-not-found.md)
 - [OpenAI API 403 错误怎么解决：unsupported country 排查指南](docs/faq/openai-api-403-unsupported-country-troubleshooting.md)
 - [OpenAI API 500 错误与 503 超时怎么排查](docs/faq/openai-api-500-503-timeout-troubleshooting.md)
