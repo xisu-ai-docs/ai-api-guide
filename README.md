@@ -2,10 +2,11 @@
 
 > 官网：[犀速-AI](https://xisu.ai/) · 本仓库整理 犀速-AI 的使用教程、相关工具和常见问题，持续更新。
 
-关键词：Node.js OpenAI SDK · 401 invalid_api_key · OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · Responses API · Chat Completions · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit · Claude Code · 犀速-AI · Windows · macOS · Linux · Anthropic API · 环境变量 · Claude 模型 · 真模型验证 · 模型替换 · 模型降级 · 分词器指纹 · request_id · token 对账 · Claude
+关键词：OpenAI API 401 · Python SDK request_id · Node.js OpenAI SDK · 401 invalid_api_key · OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · Responses API · Chat Completions · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit · Claude Code · 犀速-AI · Windows · macOS · Linux · Anthropic API · 环境变量 · Claude 模型 · 真模型验证 · 模型替换 · 模型降级 · 分词器指纹 · request_id
 
 ## 教程
 
+- [Python OpenAI SDK 401 invalid_api_key：request_id 与最小请求排查](docs/tutorials/python-openai-sdk-401-invalid-api-key-request-id.md)
 - [2026 年 10 月 Codex CLI 接入犀速AI：Responses API 配置与实测指南](docs/tutorials/codex-cli-xisu-responses-api.md)
 - [Claude Code 接入犀速-AI：Windows、macOS、Linux 配置教程（2026 年 10 月）](docs/tutorials/claude-code-xisu-ai-setup.md)
 - [2026年10月如何确认调用到的是真模型？分词器、原厂功能与 request_id 核验指南](docs/tutorials/verify-real-model-tokenizer-request-id.md)
