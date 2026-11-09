@@ -2,10 +2,11 @@
 
 > 官网：[犀速-AI](https://xisu.ai/) · 本仓库整理 犀速-AI 的使用教程、相关工具和常见问题，持续更新。
 
-关键词：OpenAI Python SDK · Responses API · BadRequestError · OpenAI API 401 · Python SDK request_id · Node.js OpenAI SDK · 401 invalid_api_key · OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · Chat Completions · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit · Claude Code · 犀速-AI · Windows · macOS · Linux · Anthropic API · 环境变量 · Claude 模型 · 真模型验证 · 模型替换 · 模型降级
+关键词：Node.js OpenAI SDK · Responses API · OpenAI Python SDK · BadRequestError · OpenAI API 401 · Python SDK request_id · 401 invalid_api_key · OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · Chat Completions · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit · Claude Code · 犀速-AI · Windows · macOS · Linux · Anthropic API · 环境变量 · Claude 模型 · 真模型验证 · 模型替换 · 模型降级
 
 ## 教程
 
+- [Node.js OpenAI SDK Responses API：最小请求与 output_text、_request_id 读取](docs/tutorials/nodejs-openai-sdk-responses-api-output-text-request-id.md)
 - [OpenAI Python SDK Responses API：最小请求与 output_text 读取](docs/tutorials/openai-python-sdk-responses-api-output-text.md)
 - [OpenAI Python SDK BadRequestError 怎么排查：400 错误读取 body 与 param](docs/tutorials/openai-python-sdk-badrequesterror-400-body-param.md)
 - [Python OpenAI SDK 401 invalid_api_key：request_id 与最小请求排查](docs/tutorials/python-openai-sdk-401-invalid-api-key-request-id.md)
