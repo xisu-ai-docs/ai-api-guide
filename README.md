@@ -2,7 +2,7 @@
 
 > 官网：[犀速-AI](https://xisu.ai/) · 本仓库整理 犀速-AI 的使用教程、相关工具和常见问题，持续更新。
 
-关键词：OpenAI Python SDK · finish_reason · Python OpenAI SDK · AsyncOpenAI · max_retries · 关闭自动重试 · OpenAI 兼容 API · timeout · 请求超时 · APITimeoutError · Chat Completions · choices[0].message.content · Node.js OpenAI SDK · Responses API · BadRequestError · OpenAI API 401 · Python SDK request_id · 401 invalid_api_key · OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit · Claude Code
+关键词：APIConnectionError · Python OpenAI SDK · OpenAI Python SDK · finish_reason · AsyncOpenAI · max_retries · 关闭自动重试 · OpenAI 兼容 API · timeout · 请求超时 · APITimeoutError · Chat Completions · choices[0].message.content · Node.js OpenAI SDK · Responses API · BadRequestError · OpenAI API 401 · Python SDK request_id · 401 invalid_api_key · OpenAI API 404 · model_not_found · OpenAI API 403 · unsupported country · Codex CLI · 犀速AI · config.toml · API 密钥 · 模型选择 · 命令行编程助手 · light-edit
 
 ## 教程
 
@@ -31,6 +31,7 @@
 
 ## 常见问题
 
+- [Python OpenAI SDK APIConnectionError 怎么排查：Base URL、代理与超时定位指南](docs/faq/python-openai-sdk-apiconnectionerror-troubleshooting.md)
 - [Node.js OpenAI SDK 401 invalid_api_key：request ID 读取与排查](docs/faq/nodejs-openai-sdk-401-invalid-api-key-request-id.md)
 - [OpenAI API 404 model_not_found 怎么解决：模型名称与 Base URL 排查指南](docs/faq/openai-api-404-model-not-found.md)
 - [OpenAI API 403 错误怎么解决：unsupported country 排查指南](docs/faq/openai-api-403-unsupported-country-troubleshooting.md)
